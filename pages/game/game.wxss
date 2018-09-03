@@ -1,0 +1,102 @@
+/* pages/game/game.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: left;
+  flex-wrap: wrap;
+  background-color: #59c2bb;
+  font-size: 35rpx;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.gameinfo {
+  align-self: flex-end;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  order: 5rpx;
+}
+
+.applogo {
+  align-self: center;
+  order: 5rpx;
+}
+
+.applogo image {
+  height: 100%;
+  width: 100%;
+}
+
+.game {
+  align-self: center;
+  order: 5rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usersegment {
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.weui-article__p {
+  align-self: center;
+  color: white;
+}
+
+.dataTab {
+  display: flex;
+  width: 700rpx;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  border-radius: 8px;
+  padding-bottom: 10rpx;
+  position: relative;
+  right: -25rpx;
+}
+
+.dataItem {
+  background-color: white;
+  width: 700rpx;
+  border-radius: 8px;
+  justify-content: left;
+}
+
+.dataItem_button {
+  display: flex;
+  justify-content:space-around;
+  background-color: rgb(52, 57, 59);
+  font-size: 25rpx;
+    color: rgb(255, 255, 255);
+  z-index: 9999;
+  position: absolute;
+    top: 10rpx;
+  right: 10rpx;
+}
+
+.dataItem_text {
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 30rpx;
+  justify-content: flex-end;
+  padding-right: 20rpx;
+  padding-bottom: 15rpx;
+}
+
+.gamestrat_button {
+}

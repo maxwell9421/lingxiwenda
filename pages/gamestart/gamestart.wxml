@@ -1,0 +1,38 @@
+<view class='container'>
+  <view class='poptab'>
+    <wux-animation-group wux-class="{{example.classNames}}" in="{{ example.in }}" enter="{{ example.enter }}" exit="{{ example.exit }}" class-names="{{ example.classNames }}" bind:click="onClick" bind:enter="onEnter" bind:entering="onEntering" bind:entered="onEntered"
+      bind:exit="onExit" bind:exiting="onExiting" bind:exited="onExited">
+      <view class='quetion'>
+        <text> {{questionIndex*1 + 1}}/10:{{Question[index].question}}</text>
+      </view>
+      <view class='answer_' wx:if="{{userType}}">
+        <radio-group class="radio-group" bindchange="radioChange" checkkgroup="{{radioState}}">
+          <label class="radio" wx:for="{{Question[index]._items}}">
+            <view class='answer_item'>
+              <radio value="{{item.name}}" checked='{{radioState}}' />{{item.value}}
+            </view>
+          </label>
+        </radio-group>
+      </view>
+
+      <view class='answer_' wx:else>
+        <radio-group class="radio-group" bindchange="_radioChange">
+          <label class="radio" wx:for="{{Question[index]._items}}">
+            <view class='answer_item'>
+              <radio value="{{item.name}}" checked='{{radioState}}' />{{item.value}}
+            </view>
+          </label>
+        </radio-group>
+        <view class="userinfo">
+          <block>
+            <image class="userinfo-avatar" src="{{_avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{_nickName}}</text>
+          </block>
+        </view>
+      </view>
+    </wux-animation-group>
+  </view>
+  <view class='background'>
+    <image  style="width: 433px; height: 340; background-color: #59c2bb;" mode="aspectFit" src="http://oqiz.youxiaochi.cn/image/bg.jpg"></image>
+  </view>
+</view>

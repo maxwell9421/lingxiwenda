@@ -1,0 +1,8 @@
+/**app.wxss**/
+page{
+
+background-color:"#59c2bb";
+
+height:100%;
+
+}

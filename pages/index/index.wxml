@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='applogo'>
+    <image style="width: 300px; height: 100px; background-color: #59c2bb;" mode="aspectFit" src="http://oqiz.youxiaochi.cn/image/logo.png"></image>
+  </view>
+  <view class='popgameinfo'>
+    <text class='popgameinfo-text'>游戏说明：
+    </text>
+    <text>{{gameInfo}}
+    </text>
+    <!-- <wux-button block class='bottom_button' size="small" type="assertive" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">明白了</wux-button>         -->
+    <button class='bottom_button' size='mini' type='warn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">明白</button>
+  </view>
+</view>

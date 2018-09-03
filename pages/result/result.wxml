@@ -1,0 +1,44 @@
+<!--pages/result/result.wxml-->
+<view class='container'>
+  <view class='applogo'>
+    <image style="width: 300px; height: 100px; background-color: #59c2bb;" mode="aspectFit" src="http://oqiz.youxiaochi.cn/image/logo.png"></image>
+  </view>
+  <view class='poptab'>
+    <view class='game' wx:if="{{userType}}">
+      <text class='title_text_'>你和ta 心有灵犀吗 ？</text>
+      <view class="userinfo">
+        <block>
+          <image style="width: 300 height: 300; background-color: ##ddd5c4cb;" mode="aspectFit" src="{{qrcodeURL}}" bindtap='qrcodeTap'></image>
+        </block>
+      </view>
+      <view class="page__bd_">
+      <text class='title_text'>tips：点击图片长按识别二维码</text>
+        <wux-divider show-text="{{ false }}" dashed />
+        <view class="weui-btn-area text-center">
+          <wux-button block class='bottom_button' size="small" type="assertive" open-type='share'>邀请好友答题</wux-button>
+          <wux-button block class='bottom_button' size="small" type="balanced" bindtap='toGamePage'>返回首页</wux-button>
+        </view>
+      </view>
+    </view>
+    <view class='game' wx:else>
+      <view class='userinfo'>
+        <image class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+        <wux-icon type="md-arrow-forward" size='45' color='#59c2bb' />
+        <image class="userinfo-avatar" src="{{_avatarUrl}}" mode="cover"></image>
+      </view>
+      <text color="white">你和{{_nickName}}的灵犀值为：
+    </text>
+      <view class="page__bd">
+        <view class="text-center">
+          <view class="countup">{{ c2 }}</view>
+        </view>
+        <wux-divider show-text="{{ false }}" dashed />
+        <view class="weui-btn-area text-center">
+          <wux-button block class='bottom_button' size="small" type="assertive" bindtap='toGamestartPage'>我也要出题</wux-button>
+          <wux-button block class='bottom_button' size="small" type="balanced" bindtap='toGamePage'>返回首页</wux-button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

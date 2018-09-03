@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "wux-segmented-control": "../../dist/segmented-control/index",
+    "wux-dialog": "../../dist/dialog/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-animation-group": "../../dist/animation-group/index",
+    "wux-media": "../../dist/media/index",
+    "wux-divider": "../../dist/divider/index",
+    "wux-icon": "../../dist/icon/index",
+    "wux-button": "../../dist/button/index",
+    "wux-refresher": "../../dist/refresher/index"
+  }
+}

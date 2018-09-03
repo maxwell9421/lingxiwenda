@@ -1,0 +1,62 @@
+<!--pages/game/game.wxml-->
+<wux-refresher class='container' id="wux-refresher" bind:pulling="onPulling" bind:refresh="onRefresh">
+<view class='container'>
+  <view class='gameinfo'>
+
+    <icon type="info" size="30" color='#708090' bindtap='gameinfoTap' />
+  </view>
+  <view class='applogo'>
+    <image style="width: 300px; height: 100px; background-color: #59c2bb;" mode="aspectFit" src="http://oqiz.youxiaochi.cn/image/logo.png"></image>
+  </view>
+  <view class='game'>
+    <view class="userinfo">
+      <block>
+        <image class="userinfo-avatar" src="{{_avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{_nickName}}</text>
+      </block>
+    </view>
+    <button class='gamestrat_button' type='warn' bindtap='gamestart'>开始出题</button>
+  </view>
+  <view class='usersegment'>
+    <wux-segmented-control theme="dark" data-model="example.in" bind:change="segmentChange" checked="{{true}}" values="{{ ['出题记录', '答题记录'] }}" />
+    <wux-animation-group wux-class="wux-animate--fadeIn" in="{{ example.in }}" enter="{{ example.enter }}" exit="{{ example.exit }}" class-names="{{ example.classNames }}" bind:click="onClick" bind:enter="onEnter" bind:entering="onEntering" bind:entered="onEntered"
+      bind:exit="onExit" bind:exiting="onExiting" bind:exited="onExited">
+      <view wx:if="{{status}}">
+        <!-- 默认渲染 -->
+        <view class="dataTab" wx:if="{{default_status1}}">
+          <view class="dataItem">
+            <wux-media thumb="{{default_userData[0].data1.avatarUrl}}" thumb-style="border-radius: 50%" title="{{default_userData[0].data1.highscoreStr}}" label="{{default_userData[0].data1.decStr}}"></wux-media>
+          </view>
+        </view>
+        <view class="dataTab" wx:for="{{userData.data1}}">
+                        <!-- <wux-button id='55' class='dataItem_button'  block size="small" type="calm" id="55"  open-type='share'  data-id="{{item.answerNum}}">分享{{item.answerNum}}</wux-button> -->
+        <button class='dataItem_button' id="{{item.answerNum}}"  size='mini' open-type='share' plain='true' data-id="{{item.answerNum}}">分享</button>
+          <view class="dataItem">
+            <wux-media thumb="{{item.avatarUrl}}" thumb-style="border-radius: 50%" title="{{item.highscoreStr}}" label="{{item.decStr}}">
+            </wux-media>
+            <text class='dataItem_text'>{{item.createTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <!-- 默认渲染 -->
+        <view class="dataTab" wx:if="{{default_status2}}">
+          <view class="dataItem">
+            <wux-media thumb="{{default_userData[0].data2.avatarUrl}}" thumb-style="border-radius: 50%" title="{{default_userData[0].data2.highscoreStr}}" label="{{default_userData[0].data2.decStr}}"></wux-media>
+          </view>
+        </view>
+        <view class="dataTab" wx:for="{{userData.data2}}">
+          <view class="dataItem">
+            <wux-media thumb="{{item.avatarUrl}}" thumb-style="border-radius: 50%" title="{{item.highscoreStr}}" label="{{item.decStr}}"></wux-media>
+            <text class='dataItem_text'>{{item.createTime}}</text>
+          </view>
+        </view>
+      </view>
+      <wux-divider position="right" text="底线：仅显示最近5条记录" />
+    </wux-animation-group>
+  </view>
+  <view>
+  </view>
+
+</view>
+</wux-refresher>

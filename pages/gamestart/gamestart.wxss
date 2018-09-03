@@ -1,0 +1,65 @@
+/* pages/gamestart/gamestart.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content:flex-start;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  background-color: #59c2bb;
+  font-size: 35rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.poptab{
+  width: 500rpx;
+  height: 600rpx;
+  padding-top: 50rpx;
+  padding-right: 50rpx;
+  padding-left: 50rpx;
+  padding-bottom: 50rpx;
+  align-self:center;
+  background-color: rgba(221, 213, 196, 0.795);
+  border-radius: 8px; 
+}
+.quetion text{
+  color: rgb(0, 88, 204);
+}
+
+.answer_{
+flex-wrap:wrap;
+}
+.answer_item{
+padding-top: 20rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.background{
+  display: flex;
+  flex-direction: column;
+  align-self:flex-end;
+  justify-content:flex-end;
+  position: relative;
+}

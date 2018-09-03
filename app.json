@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game",
+    "pages/result/result",
+    "pages/gamestart/gamestart"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#59c2bb",
+    "navigationBarTitleText": "灵犀问答",
+    "navigationBarTextStyle": "black"
+  }
+}

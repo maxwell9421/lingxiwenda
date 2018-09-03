@@ -1,0 +1,81 @@
+/* pages/game/game.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: left;
+  flex-wrap: wrap;
+  background-color: #59c2bb;
+  font-size: 35rpx;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.gameinfo {
+  padding-right: 50rpx;
+  padding-top: 50rpx;
+  align-self: flex-end;
+  order: 5rpx;
+}
+
+.applogo {
+  align-self: center;
+  order: 5rpx;
+}
+
+.applogo image {
+  height: 100%;
+  width: 100%;
+}
+
+.poptab {
+  width: 500rpx;
+
+  padding-top: 50rpx;
+  padding-right: 50rpx;
+  padding-left: 50rpx;
+
+  align-self: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.game {
+  align-self: center;
+  justify-content:space-between;
+  order: 5rpx;
+}
+
+.userinfo {
+  display: flex;
+  position: relative;
+  bottom: 20rpx;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.countup {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 5.2em;
+  color:#59c2bb;
+}
+
+.page__bd {
+  padding-top: 50rpx;
+}
+.page__bd_ {
+  padding-top: -30rpx;
+}
+
+.title_text_{
+  position: relative;
+  top: -20rpx;
+}
